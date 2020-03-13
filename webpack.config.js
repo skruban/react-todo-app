@@ -32,6 +32,7 @@ module.exports = {
   },
   plugins: [
     new htmlWebpackPlugin({
+      title: 'Todo App',
       filePath: publicFolderPath,
       filename: 'index.html'
     })
