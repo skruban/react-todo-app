@@ -7,8 +7,10 @@ function TodoList () {
 
   return (
     <React.Fragment>
-      <AddTodo addTodo={addTodo} />
-      <TodoItem todoList={todoList} />
+      <AddTodo todoList={todoList} addTodo={addTodo} />
+      {todoList.forEach((todoItem) => {
+        return <TodoItem todoItem={todoItem} />
+      })}
     </React.Fragment>
   )
 }

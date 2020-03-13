@@ -11,6 +11,7 @@ module.exports = {
     filename: 'main.js'
   },
   devServer: {
+    hot: true,
     port: '9000',
     contentBase: publicFolderPath,
   },
