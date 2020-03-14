@@ -1,9 +1,9 @@
 require('./TodoItem.css');
 const React = require('react');
 
-function TodoItem ({ TodoItem }) {
+function TodoItem ({ item }) {
   return (
-  <div>{TodoItem.name}</div>
+  <div>{item.name}</div>
   );
 }
 

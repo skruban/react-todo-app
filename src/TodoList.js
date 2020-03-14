@@ -4,12 +4,22 @@ const TodoItem = require('./TodoItem');
 
 function TodoList () {
   const [todoList, addTodo] = React.useState([]);
+  const handleSubmit = (taskName) => {
+    addTodo([
+      ...todoList,
+      {
+        done: false,
+        name: taskName,
+        id: `_task_${todoList.length}`
+      }
+    ]);
+  };
 
   return (
     <React.Fragment>
-      <AddTodo todoList={todoList} addTodo={addTodo} />
-      {todoList.forEach((todoItem) => {
-        return <TodoItem todoItem={todoItem} />
+      <AddTodo handleSubmit={handleSubmit} />
+      {todoList.map((item) => {
+        return <TodoItem key={item.id} item={item} />
       })}
     </React.Fragment>
   )
