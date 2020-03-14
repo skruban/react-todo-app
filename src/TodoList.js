@@ -1,3 +1,4 @@
+require('./TodoList.css');
 const React = require('react');
 const AddTodo = require('./AddTodo');
 const TodoItem = require('./TodoItem');
@@ -16,12 +17,13 @@ function TodoList () {
   };
 
   return (
-    <React.Fragment>
+    <div class="todo-list">
+      <h3 class="todo-title">React Todo App</h3>
       <AddTodo handleSubmit={handleSubmit} />
       {todoList.map((item) => {
         return <TodoItem key={item.id} item={item} />
       })}
-    </React.Fragment>
+    </div>
   )
 }
 

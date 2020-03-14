@@ -1,7 +1,13 @@
-input {
-  width: 70%;
+.field-task-name {
+  width: 300px;
+  padding: 2px;
+  border: 1px solid #999999;
 }
 
-button {
+.field-task-name:focus {
+  border-color: blueviolet;
+}
 
+.button-add-task {
+  width: 94px;
 }
