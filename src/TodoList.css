@@ -1,0 +1,17 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Arial Black, Arial Bold, Gadget, sans-serif;
+}
+
+.todo-list {
+  margin: auto;
+  padding: 0.0625rem 0 0 0;
+  width: 400px;
+}
+
+.todo-title {
+  margin: 0.625rem 0 0.3125rem 0;
+}
