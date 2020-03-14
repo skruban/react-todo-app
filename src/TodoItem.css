@@ -1,0 +1,10 @@
+.todo-item {
+  text-align: left;
+  border-top: 1px solid violet;
+}
+.todo-item:first-child {
+  border-top-width: 0;
+}
+.field-task-status {}
+.field-task {}
+.button-delete-task {}
