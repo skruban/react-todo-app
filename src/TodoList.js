@@ -27,6 +27,8 @@ function TodoList () {
     ]);
   };
 
+  // const handleTaskDelete = () => {};
+
   return (
     <div className="todo-list">
       <h3 className="todo-title">React Todo App</h3>
