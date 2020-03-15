@@ -27,14 +27,18 @@ function TodoList () {
     ]);
   };
 
-  // const handleTaskDelete = () => {};
+  const handleTaskDelete = (taskId) => {
+    addTodo(todoList.filter(({ id }) => {
+      return id !== taskId;
+    }));
+  };
 
   return (
     <div className="todo-list">
       <h3 className="todo-title">React Todo App</h3>
       <AddTodo handleSubmit={handleSubmit} />
       {todoList.map((item) => {
-        return <TodoItem key={item.id} item={item} />
+        return <TodoItem key={item.id} item={item} handleTaskDelete={handleTaskDelete} />
       })}
     </div>
   )
