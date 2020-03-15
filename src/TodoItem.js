@@ -9,7 +9,7 @@ function TodoItem ({ item }) {
 
   return (
     <div className={`todo-item ${item.id}`}>
-      <input type="checkbox" checked={isTaskCompleted} onClick={handleTaskStatusUpdate} className="field-task-status" />
+      <input type="checkbox" checked={isTaskCompleted} onChange={handleTaskStatusUpdate} className="field-task-status" />
       <span className={`task-name ${taskCompletedStyle}`}>{item.name}</span>
       <button className="button-delete-task">delete</button>
     </div>
