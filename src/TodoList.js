@@ -4,21 +4,32 @@ const AddTodo = require('./AddTodo');
 const TodoItem = require('./TodoItem');
 
 function TodoList () {
-  const [todoList, addTodo] = React.useState([]);
-  const handleSubmit = (taskName) => {
+  const [todoList, addTodo] = React.useState([
+    {
+      isCompleted: true,
+      name: 'eat dinner',
+      id: 'task-1'
+    },
+    {
+      isCompleted: false,
+      name: 'commit atleast once in github',
+      id: 'task-2'
+    }
+  ]);
+  const handleSubmit = (name) => {
     addTodo([
       ...todoList,
       {
-        done: false,
-        name: taskName,
-        id: `_task_${todoList.length}`
+        isCompleted: false,
+        name,
+        id: `task-${todoList.length}`
       }
     ]);
   };
 
   return (
-    <div class="todo-list">
-      <h3 class="todo-title">React Todo App</h3>
+    <div className="todo-list">
+      <h3 className="todo-title">React Todo App</h3>
       <AddTodo handleSubmit={handleSubmit} />
       {todoList.map((item) => {
         return <TodoItem key={item.id} item={item} />
