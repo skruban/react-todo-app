@@ -28,8 +28,8 @@ function TodoList () {
   };
 
   return (
-    <div class="todo-list">
-      <h3 class="todo-title">React Todo App</h3>
+    <div className="todo-list">
+      <h3 className="todo-title">React Todo App</h3>
       <AddTodo handleSubmit={handleSubmit} />
       {todoList.map((item) => {
         return <TodoItem key={item.id} item={item} />

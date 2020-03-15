@@ -3,10 +3,10 @@ const React = require('react');
 
 function TodoItem ({ item }) {
   return (
-    <div class="todo-item">
+    <div className={`todo-item ${item.id}`}>
       <input type="radio" checked={item.isCompleted} class="field-task-status" />
-      <span class="field-task">{item.name}</span>
-      <button class="button-delete-task">delete</button>
+      <span className="field-task">{item.name}</span>
+      <button className="button-delete-task">delete</button>
     </div>
   );
 }

@@ -8,10 +8,10 @@ function AddTodo ({ handleSubmit }) {
   };
 
   return (
-    <React.Fragment>
-      <input type="text" value={taskName} onChange={handleChange} class="field-task-name" />
-      <button onClick={() => handleSubmit(taskName)} class="button-add-task">Add Task</button>
-    </React.Fragment>
+    <div>
+      <input type="text" value={taskName} onChange={handleChange} className="field-task-name" />
+      <button onClick={() => handleSubmit(taskName)} className="button-add-task">Add Task</button>
+    </div>
   );
 }
 
