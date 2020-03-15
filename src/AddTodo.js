@@ -8,7 +8,7 @@ function AddTodo ({ handleSubmit }) {
   };
 
   return (
-    <div>
+    <div className="add-todo">
       <input type="text" value={taskName} onChange={handleChange} className="field-task-name" />
       <button onClick={() => handleSubmit(taskName)} className="button-add-task">Add Task</button>
     </div>

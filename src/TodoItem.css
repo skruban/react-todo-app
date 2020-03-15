@@ -25,7 +25,6 @@
   border-color: blueviolet;
   outline-color: blueviolet;
 }
-.task-name {}
 .task-name.is-completed {
   text-decoration: line-through;
 }
