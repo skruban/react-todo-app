@@ -17,6 +17,11 @@ body {
   margin: 0.625rem 0 0.3125rem 0;
 }
 
-.todo-list div.todo-item:first-child {
-  background-color: red;
+.error-message {
+  margin: 5px 0;
+  padding: 5px;
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 0.75rem;
+  color: red;
+  border: 2px solid red;
 }
