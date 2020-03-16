@@ -25,6 +25,9 @@
   border-color: blueviolet;
   outline-color: blueviolet;
 }
+.task-name {
+  word-break: break-all;
+}
 .task-name.is-completed {
   text-decoration: line-through;
 }

@@ -7,18 +7,7 @@ let handleTimeOut = null;
 const ERROR_TIMEOUT = 10000;
 
 function TodoList () {
-  const [todoList, addTodo] = React.useState([
-    {
-      isCompleted: true,
-      name: 'eat dinner',
-      id: 'task-1'
-    },
-    {
-      isCompleted: false,
-      name: 'commit atleast once in github',
-      id: 'task-2'
-    }
-  ]);
+  const [todoList, addTodo] = React.useState([]);
   const [error, updateError] = React.useState({ show: false, message: null });
 
   const updateErrorHandler = (message) => {
@@ -50,7 +39,7 @@ function TodoList () {
       {
         isCompleted: false,
         name,
-        id: `task-${todoList.length}`
+        id: `task-${todoList.length * name.length}`
       }
     ]);
   };
