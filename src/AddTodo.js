@@ -8,8 +8,9 @@ function AddTodo ({ handleSubmit }) {
   };
 
   const handleClick = () => {
-    handleSubmit(taskName);
-    addTaskName('');
+    if (handleSubmit(taskName)) {
+      addTaskName('');
+    }
   };
 
   return (

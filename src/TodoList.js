@@ -42,6 +42,8 @@ function TodoList () {
         id: `task-${todoList.length * name.length}`
       }
     ]);
+
+    return true;
   };
 
   const handleTaskDelete = (taskId) => {
